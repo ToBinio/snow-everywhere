@@ -2,25 +2,29 @@
   "schemaVersion": 1,
   "id": "snow-everywhere",
   "version": "${version}",
-
   "name": "Snow Everywhere",
   "description": "",
   "authors": [],
-  "contact": {},
-
+  "contact": {
+    "repo": "https://github.com/tobia/snow-everywhere"
+  },
   "license": "MIT",
   "icon": "assets/snow-everywhere/icon.png",
-
   "environment": "client",
-  "entrypoints": {},
-
-      "mixins": [
-        "snow-everywhere.mixins.json"
-      ],
-
+  "entrypoints": {
+    "client": [
+      "tobinio.snoweverywhere.client.SnowEverywhereClient"
+    ],
+    "main": [
+      "tobinio.snoweverywhere.SnowEverywhere"
+    ]
+  },
+  "mixins": [
+    "snow-everywhere.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
+    "fabric": "*",
     "minecraft": "${minecraft_version}"
   }
 }
